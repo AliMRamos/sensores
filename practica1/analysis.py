@@ -5,7 +5,7 @@ from scipy.optimize import curve_fit
 
 # Data
 alpha = 3.85e-3
-R_0 = 100
+R_0 = 100  # ohmnios
 r = 39
 V_c = 30
 
@@ -18,7 +18,7 @@ S_L = r * alpha * V_c / (r + 1) ** 2
 G = 5 / (100 * S_L)
 
 # Modelo Ideal
-sl = S_L * 1000
+sl = S_L * 1000  # V/grade
 
 
 def read_data(file_data):
@@ -42,7 +42,7 @@ def zero_error(param):
 
 
 def sensitivity_error(param, const):
-    return abs((param[0] - const)) / const
+    return 100 * abs((param[0] - const)) / const
 
 
 # DATA PREP
@@ -71,7 +71,7 @@ v_a_model = linear(t_theoretical, sl, 0)
 
 # ERRORS
 zero_err_bri = zero_error(param_bri)
-sensitivity_err_bri = sensitivity_error(param_bri, sl) * 100
+sensitivity_err_bri = sensitivity_error(param_bri, sl)
 lineal_err_bri = lineal_error(v_a, t_testigo, param_bri)
 
 str_zero_bri = f"Error de cero: \u03B5 = {zero_err_bri:.2f}"
@@ -103,7 +103,7 @@ v_a_theoretical = np.linspace(0, sl * 100, len(v_a))
 # Curve Fitted
 param_amp, pcov_amp = curve_fit(linear, v_a, v_s)
 err_amp = np.sqrt(np.diag(pcov_amp))
-print(err_amp)
+
 v_o_fittingV = linear(v_a_theoretical, param_amp[0], param_amp[1])
 amp_equation = f"V_0[V] = ({param_amp[0]:.6f} ± {err_amp[0]:.2}) * V_sl + ({param_amp[1]:.4f} ± {err_amp[1]:.2})"
 print(amp_equation)
@@ -113,7 +113,7 @@ v_o_modelV = linear(v_a_theoretical, G / 1000, 0)
 
 # ERRORS
 zero_err_amp = zero_error(param_amp)
-sensitivity_err_amp = sensitivity_error(param_amp, G * 1000)
+sensitivity_err_amp = sensitivity_error(param_amp, G / 1000)
 lineal_err_amp = lineal_error(v_s, v_a, param_amp)
 
 str_zero_amp = f"Error de cero: \u03B5 = {zero_err_amp:.2f}"
@@ -153,7 +153,7 @@ v_o_modelT = linear(t_theoretical, G * sl / 1000, 0)
 
 # ERRORS
 zero_err_sys = zero_error(param_sys)
-sensitivity_err_sys = sensitivity_error(param_sys, sl)
+sensitivity_err_sys = sensitivity_error(param_sys, 0.05)
 lineal_err_sys = lineal_error(v_s, t_testigo, param_sys)
 
 str_zero_sys = f"Error de cero: \u03B5 = {zero_err_sys:.2f}"
