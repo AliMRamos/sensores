@@ -5,8 +5,12 @@ The plots and results will be saved in your current working directory.
 
 ## Circuit 1: RTD sensor response. 
 Data read from [data_1.txt](https://github.com/AliMRamos/sensores/blob/master/practica1/data_1.txt)
+
 Plots obtained:
-![Amplifier](https://github.com/AliMRamos/sensores/blob/master/practica1/amplifier_rtd.png)
+
+Bridge   |Amplifier| System | Temperatures
+:-------:|:-------:|:-------:|:------:
+![Bridge](https://github.com/AliMRamos/sensores/blob/master/practica1/bridge_rtd.png) |![Amplifier](https://github.com/AliMRamos/sensores/blob/master/practica1/amplifier_rtd.png) |![System](https://github.com/AliMRamos/sensores/blob/master/practica1/system_rtd.png) |![Temperatures](https://github.com/AliMRamos/sensores/blob/master/practica1/temperatuures_rtd.png) 
 ## Circuit 2: NTC sensor response
 Data read from [data_2.txt](https://github.com/AliMRamos/sensores/blob/master/practica2/data_2.txt)
 
