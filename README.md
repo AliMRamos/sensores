@@ -22,4 +22,4 @@ Plots obtained:
 
 Thermocouple   |Amplifier| Temperatures
 :-------:|:-------:|:------:
-![Thermo](https://github.com/AliMRamos/sensores/blob/master/practica3/thermocouple.png) |![Amplifier](https://github.com/AliMRamos/sensores/blob/master/practica3/amplifier_rthermocouple.png) |![Temperatures](https://github.com/AliMRamos/sensores/blob/master/practica3/temperatures_rthermocouple.png) 
+![Thermo](https://github.com/AliMRamos/sensores/blob/master/practica3/thermocouple.png) |![Amplifier](https://github.com/AliMRamos/sensores/blob/master/practica3/amplifier_thermocouple.png) |![Temperatures](https://github.com/AliMRamos/sensores/blob/master/practica3/temperatures_thermocouple.png) 
