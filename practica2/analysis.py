@@ -104,7 +104,7 @@ plt.xlabel("T (K)")
 plt.ylabel("V (V)")
 plt.grid()
 plt.legend(loc="upper center")
-plt.savefig("linear_ntc", dpi=1500)
+plt.savefig("linear_ntc")
 plt.show()
 
 # ERRORS
