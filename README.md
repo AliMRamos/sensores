@@ -16,7 +16,7 @@ Bridge   |Amplifier| System | Temperatures
 Data read from [dataLab.txt](https://github.com/AliMRamos/sensores/blob/master/practica2/dataLab.txt) and [data_2.txt](https://github.com/AliMRamos/sensores/blob/master/practica2/data_2.txt). Results can be found [here](https://github.com/AliMRamos/sensores/blob/master/practica2/results_ntc.txt).
 
 NTC |Linear 
--------:|:------:
+:-------:|:------:
 ![Ntc](https://github.com/AliMRamos/sensores/blob/master/practica2/ntc_behaviour.png)|![Linear](https://github.com/AliMRamos/sensores/blob/master/practica2/linear_ntc.png)
 
 Bridge   |Amplifier| System | Temperatures
