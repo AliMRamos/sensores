@@ -68,7 +68,7 @@ param_ntc, pcov_ntc = curve_fit(curve_ntc, t_exp, r_exp, p0=[20, 1], absolute_si
 err_ntc = np.sqrt(np.diag(pcov_ntc))
 
 r_fitting = curve_ntc(t_teor, param_ntc[0], param_ntc[1])
-ntc_equation = f"R = ({param_ntc[0]:.2f} ± {err_ntc[0]:.2})*e^[({param_ntc[1]:.2f}= ± {err_ntc[1]:.2e})*(1/T-1/{t_0})]"
+ntc_equation = f"R = ({param_ntc[0]:.2f} ± {err_ntc[0]:.2})*e^[({param_ntc[1]:.2f} ± {err_ntc[1]:.2e})*(1/T-1/{t_0})]"
 print(ntc_equation)
 
 # Plot
@@ -323,27 +323,27 @@ f.writelines("\n")
 f.writelines("\t{} \n".format("Values:"))
 f.writelines(
     "\t\t{:18} {} = {:.{}} {}\n".format(
-        "R design:", "\u03B5", r_design, "2f", "kΩ"
+        "R design:", "Rd", r_design, "2f", "kΩ"
     )
 )
 f.writelines(
     "\t\t{:18} {} = {:.{}} {} \n".format(
-        "Vi max:", "\u03B5", v_i_max, "2f", "V"
+        "Vi max:", "Vi", v_i_max, "2f", "V"
     )
 )
 f.writelines(
     "\t\t{:18} {} = {:.{}} {} \n".format(
-        "Sensitivity:", "\u03B5", sl, "2f", "V/ºC"
+        "Sensitivity:", "Sl", sl, "2f", "V/ºC"
     )
 )
 f.writelines(
     "\t\t{:18} {} = {:.{}} \n".format(
-        "Gain:", "\u03B5", G, "2f"
+        "Gain:", "G", G, "2f"
     )
 )
 f.writelines(
     "\t\t{:18} {} = {:.{}} {} \n".format(
-        "Rg:", "\u03B5", R_G, "2f", "kΩ"
+        "Rg:", "Rg", R_G, "2f", "kΩ"
     )
 )
 f.writelines("+------------------------------------------------------------+\n")
