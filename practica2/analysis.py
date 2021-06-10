@@ -232,7 +232,7 @@ sys_equation = f"V_0[V] = ({param_sys[0]:.5f} ± {err_sys[0]:.2}) * t + ({param_
 print(sys_equation)
 
 # Model
-v_o_modelT = linear(t_theoretical, G * sl, 0)
+v_o_modelT = linear(t_theoretical, G * sl, G*sl*(-30))
 
 # ERRORS
 zero_err_sys = zero_error(param_sys)
